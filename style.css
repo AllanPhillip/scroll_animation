@@ -46,3 +46,47 @@ h1 {
 .box h2 {
     font-size: 45px;
 }
+
+
+
+@media (max-width: 600px) { 
+
+    body {
+        overflow-x: none;
+    
+    }
+
+    .box{
+        background-color: steelblue;
+        color: #FFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 100px;
+        margin: 5px;
+        border-radius: 10px;
+        box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+        transform: translateX(200%);
+        transition: transform .7s ease;
+        cursor: pointer;
+    }
+
+    h1 {
+    font-size: 20px;
+    margin: 5px;
+    }
+
+    .box h2 {
+    font-size: 15px;
+    }
+
+    .box:nth-of-type(even) {
+    transform: translateX(-200%);
+    }
+
+    .box.show {
+    transform: translateX(0);
+    }
+
+}
